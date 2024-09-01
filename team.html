@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unser Team - Webify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A192F;
+            color: #FFFFFF;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            width: 100%;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(10, 25, 47, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background-color 0.5s ease;
+        }
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #64FFDA;
+            text-decoration: none;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin-left: 30px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #64FFDA;
+        }
+        .team {
+            padding: 120px 50px;
+            background-color: #112240;
+            text-align: center;
+        }
+        .team h2 {
+            font-size: 2.5rem;
+            color: #FFFFFF;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .team .team-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .team .team-member {
+            background-color: #0A192F;
+            padding: 40px;
+            border-radius: 10px;
+            width: 45%;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        .team .team-member:hover {
+            transform: translateY(-10px);
+        }
+        .team .team-member h3 {
+            font-size: 1.5rem;
+            color: #64FFDA;
+            margin-bottom: 10px;
+        }
+        .team .team-member p {
+            font-size: 1rem;
+            color: #A8B2D1;
+        }
+        .footer {
+            padding: 20px 50px;
+            background-color: #0A192F;
+            text-align: center;
+            color: #A8B2D1;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 992px) {
+            .navbar, .team, .footer {
+                padding: 20px;
+            }
+            .team .team-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Webify</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="team">
+        <h2>Unser Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <h3>Paul Böhmerle</h3>
+                <p>Gründer & Lead Developer</p>
+                <p>Paul ist verantwortlich für die technische Umsetzung aller Projekte. Mit seiner Leidenschaft für Programmierung und Webentwicklung sorgt er dafür, dass jede Website bis ins Detail perfekt ist.</p>
+            </div>
+            <div class="team-member">
+                <h3>Rafael Rüetschi</h3>
+                <p>Co-Gründer & Designer</p>
+                <p>Rafael bringt kreative Ideen und ein Auge für Design mit. Er stellt sicher, dass jede Website nicht nur funktional, sondern auch optisch ansprechend ist.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Webify - Alle Rechte vorbehalten</p>
+    </footer>
+</body>
+</html>

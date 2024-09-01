@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dienstleistungen - Webify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0A192F;
+            color: #FFFFFF;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            width: 100%;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(10, 25, 47, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: background-color 0.5s ease;
+        }
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #64FFDA;
+            text-decoration: none;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin-left: 30px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #64FFDA;
+        }
+        .services {
+            padding: 120px 50px;
+            background-color: #112240;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2.5rem;
+            color: #FFFFFF;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .services .service-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .services .service-item {
+            background-color: #0A192F;
+            padding: 40px;
+            border-radius: 10px;
+            width: 30%;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        .services .service-item:hover {
+            transform: translateY(-10px);
+        }
+        .services .service-item i {
+            font-size: 3rem;
+            color: #64FFDA;
+            margin-bottom: 20px;
+        }
+        .services .service-item h3 {
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+        .services .service-item p {
+            font-size: 1rem;
+            color: #A8B2D1;
+        }
+        .footer {
+            padding: 20px 50px;
+            background-color: #0A192F;
+            text-align: center;
+            color: #A8B2D1;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 992px) {
+            .navbar, .services, .footer {
+                padding: 20px;
+            }
+            .services .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .services .service-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Webify</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="dienstleistungen.html">Dienstleistungen</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="services">
+        <h2>Unsere Dienstleistungen</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Webentwicklung</h3>
+                <p>Wir entwickeln responsive und leistungsstarke Websites, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Webdesign</h3>
+                <p>Unser kreatives Design-Team erstellt ansprechende und intuitive Designs, die Ihre Marke hervorheben.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-search"></i>
+                <h3>SEO-Optimierung</h3>
+                <p>Wir sorgen dafür, dass Ihre Website in Suchmaschinen gefunden wird und steigern so Ihre Online-Präsenz.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Webify - Alle Rechte vorbehalten</p>
+    </footer>
+</body>
+</html>
